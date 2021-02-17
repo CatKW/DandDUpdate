@@ -17,7 +17,7 @@ public class Races {
     private Integer id;
     private String raceName;
     private String raceDescription;
-    private String raceDetailUrl;
+    private String raceUrl;
 
     public Integer getId() {
         return id;
@@ -43,12 +43,12 @@ public class Races {
         this.raceDescription = raceDescription;
     }
 
-    public String getRaceDetailUrl() {
-        return raceDetailUrl;
+    public String getRaceUrl() {
+        return raceUrl;
     }
 
-    public void setRaceDetailUrl(String raceDetailUrl) {
-        this.raceDetailUrl = raceDetailUrl;
+    public void setRaceUrl(String raceUrl) {
+        this.raceUrl = raceUrl;
     }
     
 }
