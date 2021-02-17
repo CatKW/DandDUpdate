@@ -10,9 +10,8 @@
           <tr>
             <th>#</th>
             <th>Armor Type</th>
-            <th>Name of Armor</th>
-            <th>Armor Class</th>
-            <th>Armor Class Modifier</th>
+            <th>Armor Name</th>
+            <th>Armor Class and Modifier</th>
             <th>Armor Weight</th>
           </tr>
         </thead>
@@ -37,7 +36,7 @@
       armors:[]
     }),
     async mounted(){
-      console.log('armors being mounted')
+      console.log('armors mounted being')
       const{data} = await this.$http.get('http://localhost:8080/api/armor');
       console.log('armors mounted data', data)
       this.armor = data;
