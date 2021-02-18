@@ -2,7 +2,10 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/armors">Armors</router-link>
+      <router-link to="/armors">Armor</router-link> |
+      <router-link to="/weapons">Weapons</router-link> |
+      <router-link to="/alignments">Alignments</router-link> |
+      <router-link to="/races">Race</router-link>
     </div>
     <router-view/>
   </div>

@@ -15,11 +15,11 @@ public class Armors {
     @Column(name = "armor_id")
 
     private Integer id;
-    private String armorTypes;
-    private String armorNames;
-    private Integer armorClasses;
-    private String acModifiers;
-    private Integer armorWeights;
+    private String type;
+    private String name;
+    private Integer classNumber;
+    private String modifier;
+    private Integer weight;
 
     public Integer getId() {
         return id;
@@ -29,43 +29,45 @@ public class Armors {
         this.id = id;
     }
 
-    public String getArmorTypes() {
-        return armorTypes;
+    public String getType() {
+        return type;
     }
 
-    public void setArmorTypes(String armorTypes) {
-        this.armorTypes = armorTypes;
+    public void setType(String type) {
+        this.type = type;
     }
 
-    public String getArmorNames() {
-        return armorNames;
+    public String getName() {
+        return name;
     }
 
-    public void setArmorNames(String armorNames) {
-        this.armorNames = armorNames;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public Integer getArmorClasses() {
-        return armorClasses;
+    public Integer getClassNumber() {
+        return classNumber;
     }
 
-    public void setArmorClasses(Integer armorClasses) {
-        this.armorClasses = armorClasses;
+    public void setClassNumber(Integer classNumber) {
+        this.classNumber = classNumber;
     }
 
-    public String getAcModifiers() {
-        return acModifiers;
+    public String getModifier() {
+        return modifier;
     }
 
-    public void setAcModifiers(String acModifiers) {
-        this.acModifiers = acModifiers;
+    public void setModifier(String modifier) {
+        this.modifier = modifier;
     }
 
-    public Integer getArmorWeights() {
-        return armorWeights;
+    public Integer getWeight() {
+        return weight;
     }
 
-    public void setArmorWeights(Integer armorWeights) {
-        this.armorWeights = armorWeights;
+    public void setWeight(Integer weight) {
+        this.weight = weight;
     }
+
+    
 }

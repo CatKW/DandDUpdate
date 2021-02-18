@@ -41,11 +41,11 @@ public class ArmorsController {
     public @ResponseBody String updateArmors(@PathVariable(value = "id") Integer id, @RequestBody Armors armorsDetails) {
         Optional<Armors> optionalArmors = armorsRepository.findById(id);
         Armors armors = optionalArmors.get();
-        armors.setArmorClasses(armorsDetails.getArmorClasses());
-        armors.setAcModifiers(armorsDetails.getAcModifiers());
-        armors.setArmorNames(armorsDetails.getArmorNames());
-        armors.setArmorTypes(armorsDetails.getArmorTypes());
-        armors.setArmorWeights(armorsDetails.getArmorWeights());
+        armors.setClassNumber(armorsDetails.getClassNumber());
+        armors.setModifier(armorsDetails.getModifier());
+        armors.setName(armorsDetails.getName());
+        armors.setType(armorsDetails.getType());
+        armors.setWeight(armorsDetails.getWeight());
 
         armorsRepository.save(armorsDetails);
         return "Updated";

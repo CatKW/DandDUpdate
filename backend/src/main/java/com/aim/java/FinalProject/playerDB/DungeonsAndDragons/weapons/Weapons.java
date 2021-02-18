@@ -15,10 +15,10 @@ public class Weapons {
     @Column(name = "weapons_id")
 
     private Integer id;
-    private String weaponsType;
-    private String weaponsName;
-    private String weaponsDamage;
-    private Integer weaponsWeight;
+    private String type;
+    private String name;
+    private String damage;
+    private Integer weight;
 
     public Integer getId() {
         return id;
@@ -28,35 +28,35 @@ public class Weapons {
         this.id = id;
     }
 
-    public String getWeaponsType() {
-        return weaponsType;
-    }
+	public String getType() {
+		return type;
+	}
 
-    public void setWeaponsType(String weaponsType) {
-        this.weaponsType = weaponsType;
-    }
+	public void setType(String type) {
+		this.type = type;
+	}
 
-    public String getWeaponsName() {
-        return weaponsName;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public void setWeaponsName(String weaponsName) {
-        this.weaponsName = weaponsName;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-    public String getWeaponsDamage() {
-        return weaponsDamage;
-    }
+	public String getDamage() {
+		return damage;
+	}
 
-    public void setWeaponsDamage(String weaponsDamage) {
-        this.weaponsDamage = weaponsDamage;
-    }
+	public void setDamage(String damage) {
+		this.damage = damage;
+	}
 
-    public Integer getWeaponsWeight() {
-        return weaponsWeight;
-    }
+	public Integer getWeight() {
+		return weight;
+	}
 
-    public void setWeaponsWeight(Integer weaponsWeight) {
-        this.weaponsWeight = weaponsWeight;
-    }
+	public void setWeight(Integer weight) {
+		this.weight = weight;
+	}
 }

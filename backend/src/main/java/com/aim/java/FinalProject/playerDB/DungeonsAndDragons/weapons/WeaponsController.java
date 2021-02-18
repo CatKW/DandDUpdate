@@ -42,10 +42,10 @@ public class WeaponsController {
         Optional<Weapons> optionalWeapons = weaponsRepository.findById(id);
         Weapons weapons = optionalWeapons.get();
 
-        weapons.setWeaponsDamage(weaponsDetails.getWeaponsDamage());
-        weapons.setWeaponsName(weaponsDetails.getWeaponsName());
-        weapons.setWeaponsType(weaponsDetails.getWeaponsType());
-        weapons.setWeaponsWeight(weaponsDetails.getWeaponsWeight());
+        weapons.setDamage(weaponsDetails.getDamage());
+        weapons.setName(weaponsDetails.getName());
+        weapons.setType(weaponsDetails.getType());
+        weapons.setWeight(weaponsDetails.getWeight());
 
         weaponsRepository.save(weaponsDetails);
         return "Updated";       

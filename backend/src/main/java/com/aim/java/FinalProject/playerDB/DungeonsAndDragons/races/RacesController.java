@@ -42,9 +42,9 @@ public class RacesController {
         Optional<Races> optionalRaces = racesRepository.findById(id);
         Races races = optionalRaces.get();
 
-        races.setRaceDescription(racesDetails.getRaceDescription());
-        races.setRaceUrl(racesDetails.getRaceUrl());
-        races.setRaceName(racesDetails.getRaceName());
+        races.setDescription(racesDetails.getDescription());
+        races.setUrl(racesDetails.getUrl());
+        races.setName(racesDetails.getName());
 
         racesRepository.save(races);
         return "Updated";

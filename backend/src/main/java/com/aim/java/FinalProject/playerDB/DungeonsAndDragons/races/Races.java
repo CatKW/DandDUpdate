@@ -15,9 +15,9 @@ public class Races {
     @Column(name = "race_id")
 
     private Integer id;
-    private String raceName;
-    private String raceDescription;
-    private String raceUrl;
+    private String name;
+    private String description;
+    private String url;
 
     public Integer getId() {
         return id;
@@ -27,28 +27,30 @@ public class Races {
         this.id = id;
     }
 
-    public String getRaceName() {
-        return raceName;
+    public String getName() {
+        return name;
     }
 
-    public void setRaceName(String raceName) {
-        this.raceName = raceName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getRaceDescription() {
-        return raceDescription;
+    public String getDescription() {
+        return description;
     }
 
-    public void setRaceDescription(String raceDescription) {
-        this.raceDescription = raceDescription;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public String getRaceUrl() {
-        return raceUrl;
+    public String getUrl() {
+        return url;
     }
 
-    public void setRaceUrl(String raceUrl) {
-        this.raceUrl = raceUrl;
+    public void setUrl(String url) {
+        this.url = url;
     }
+
+    
     
 }

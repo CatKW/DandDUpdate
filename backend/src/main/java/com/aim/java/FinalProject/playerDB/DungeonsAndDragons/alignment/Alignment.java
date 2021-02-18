@@ -15,9 +15,9 @@ public class Alignment {
     @Column(name = "alignment_id")
 
     private Integer id;
-    private String alignmentName;
-    private String alignmentDesc;
-    private String alignmentLink;
+    private String name;
+    private String description;
+    private String linkUrl;
 
     public Integer getId() {
         return id;
@@ -27,27 +27,29 @@ public class Alignment {
         this.id = id;
     }
 
-    public String getAlignmentName() {
-        return alignmentName;
+    public String getName() {
+        return name;
     }
 
-    public void setAlignmentName(String alignmentName) {
-        this.alignmentName = alignmentName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getAlignmentDesc() {
-        return alignmentDesc;
+    public String getDescription() {
+        return description;
     }
 
-    public void setAlignmentDesc(String alignmentDesc) {
-        this.alignmentDesc = alignmentDesc;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public String getAlignmentLink() {
-        return alignmentLink;
+    public String getLinkUrl() {
+        return linkUrl;
     }
 
-    public void setAlignmentLink(String alignmentLink) {
-        this.alignmentLink = alignmentLink;
+    public void setLinkUrl(String linkUrl) {
+        this.linkUrl = linkUrl;
     }
+
+    
 }

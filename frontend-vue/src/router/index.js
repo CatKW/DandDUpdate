@@ -17,6 +17,21 @@ const routes = [
     // this generates a separate chunk (armor.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "armor" */ '../views/Armors.vue')
+  },
+  {
+    path: '/weapons',
+    name: 'Weapons',
+    component: () => import ('../views/Weapons.vue')
+  },
+  {
+    path: '/alignments',
+    name: 'Alignments',
+    component: () => import ('../views/Alignments.vue')
+  },
+  {
+    path: '/races',
+    name: 'Races',
+    component: () => import ('../views/Races.vue')
   }
 ]
 
