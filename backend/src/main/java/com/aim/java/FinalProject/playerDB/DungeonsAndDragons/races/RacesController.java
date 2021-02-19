@@ -43,7 +43,6 @@ public class RacesController {
         Races races = optionalRaces.get();
 
         races.setDescription(racesDetails.getDescription());
-        races.setDetailsUrl(racesDetails.getDetailsUrl());
         races.setName(racesDetails.getName());
 
         racesRepository.save(races);

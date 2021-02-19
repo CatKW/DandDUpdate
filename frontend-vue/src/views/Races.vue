@@ -2,6 +2,7 @@
     <div class="main">
         <div class="header">
             <h1 class="title">Dungeons and Dragons: Races</h1>
+            <p>Click on Description for additional details</p>
         </div>
 
         <div class="content">
@@ -10,8 +11,7 @@
                     <tr>
                         <th>#</th>
                         <th>Name</th>
-                        <th>Description</th>
-                        <th>Click for Additional Information</th>
+                        <th><a v-bind:href="'https://www.dndbeyond.com/races'">Description</a></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -19,7 +19,6 @@
                         <td>{{race.id}}</td>
                         <td>{{race.name}}</td>
                         <td>{{race.description}}</td>
-                        <td>{{race.detailsUrl}}</td>
                     </tr>
                 </tbody>
             </table>

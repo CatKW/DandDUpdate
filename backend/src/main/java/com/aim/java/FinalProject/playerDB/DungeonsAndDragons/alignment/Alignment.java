@@ -17,7 +17,7 @@ public class Alignment {
     private Integer id;
     private String name;
     private String description;
-    private String linkUrl;
+
 
     public Integer getId() {
         return id;
@@ -43,13 +43,7 @@ public class Alignment {
         this.description = description;
     }
 
-    public String getLinkUrl() {
-        return linkUrl;
-    }
-
-    public void setLinkUrl(String linkUrl) {
-        this.linkUrl = linkUrl;
-    }
+   
 
     
 }

@@ -2,6 +2,7 @@
     <div class="main">
         <div class="header">
             <h1 class="title">Dungeons and Dragons: Alignments</h1>
+            <p>Click on Description for additional details.</p>
         </div>
 
         <div class="content">
@@ -10,8 +11,7 @@
                     <tr>
                         <th>#</th>
                         <th>Name</th>
-                        <th>Description</th>
-                        <th>Additional Information</th>
+                        <th><a v-bind:href="'http://easydamus.com/alignment.html'">Description</a></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -19,7 +19,6 @@
                         <td>{{alignment.id}}</td>
                         <td>{{alignment.name}}</td>
                         <td>{{alignment.description}}</td>
-                        <td>{{alignment.linkUrl}}</td>
                     </tr>
                 </tbody>
             </table>
@@ -41,3 +40,4 @@ export default {
     }
 }
 </script>
+
