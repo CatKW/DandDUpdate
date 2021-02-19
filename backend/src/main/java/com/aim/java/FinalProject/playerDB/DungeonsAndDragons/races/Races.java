@@ -17,7 +17,7 @@ public class Races {
     private Integer id;
     private String name;
     private String description;
-    private String url;
+    private String detailsUrl;
 
     public Integer getId() {
         return id;
@@ -43,14 +43,12 @@ public class Races {
         this.description = description;
     }
 
-    public String getUrl() {
-        return url;
+    public String getDetailsUrl() {
+        return detailsUrl;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
+    public void setDetailsUrl(String detailsUrl) {
+        this.detailsUrl = detailsUrl;
     }
-
-    
     
 }

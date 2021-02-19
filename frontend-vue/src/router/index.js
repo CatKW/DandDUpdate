@@ -29,9 +29,14 @@ const routes = [
     component: () => import ('../views/Alignments.vue')
   },
   {
-    path: '/races',
-    name: 'Races',
-    component: () => import ('../views/Races.vue')
+  path: '/races',
+  name: 'Races',
+  component: () => import ('../views/Races.vue')
+  },
+  {
+    path: '/playerclass',
+    name: 'Playerclass',
+    component: () => import ('../views/Playerclass.vue')
   }
 ]
 

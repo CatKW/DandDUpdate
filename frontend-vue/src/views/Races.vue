@@ -19,7 +19,7 @@
                         <td>{{race.id}}</td>
                         <td>{{race.name}}</td>
                         <td>{{race.description}}</td>
-                        <td>{{race.url}}</td>
+                        <td>{{race.detailsUrl}}</td>
                     </tr>
                 </tbody>
             </table>
@@ -34,8 +34,8 @@ export default {
         races:[]
     }),
     async mounted() {
-        console.log('races being mounted')
-        const[data] = await this.$http.get('http://localhost:8080/api/races');
+        console.log('races mounted being')
+        const{data} = await this.$http.get('http://localhost:8080/api/races');
         console.log('races mounted data', data)
         this.races = data;
     }
