@@ -42,7 +42,18 @@ const routes = [
     path: '/playerclass/:id',
     name: 'Playerclass',
     component: () => import ('../views/PlayerclassDetails.vue')
+  }, 
+  {
+    path: '/players',
+    name: 'Players',
+    component: () => import('../views/Players.vue')
+  },
+  {
+    path: '/player/:id',
+    name: 'Player',
+    component: () => import ('../views/PlayerDetails.vue')
   }
+
 ]
 
 const router = new VueRouter({

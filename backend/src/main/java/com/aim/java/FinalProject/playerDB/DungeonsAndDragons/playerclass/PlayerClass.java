@@ -9,14 +9,20 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "playerclass")
-public class PlayerClass {
+public class Playerclass {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    
     @Column(name = "playerclass_id")
-
     private Integer id;
+
+    @Column(name = "playerclass_name")
     private String playerclassName;
+    
+    @Column(name = "playerclass_desc")
     private String playerclassDesc;
+    
+    @Column(name = "playerclass_url")
     private String playerclassUrl;
 
     public Integer getId() {

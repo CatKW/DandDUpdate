@@ -13,7 +13,7 @@ export default {
         playerclass: {},
     }),
     async mounted(){
-        const{data} = await this.$http.get('http://localhost:8080/api/playerclass' + this.$router.params.id);
+        const{data} = await this.$http.get('http://localhost:8080/api/playerclass/' + this.$router.params.id);
         this.playerclass = data;
     }
 }

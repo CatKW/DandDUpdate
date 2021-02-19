@@ -35,7 +35,7 @@ export default {
             this.$router.push('playerclass/' + playerclassId);
         }
     },
-    
+
     async mounted() {
         console.log('playerclasses being mounted')
         const{data} = await this.$http.get('http://localhost:8080/api/playerclass');

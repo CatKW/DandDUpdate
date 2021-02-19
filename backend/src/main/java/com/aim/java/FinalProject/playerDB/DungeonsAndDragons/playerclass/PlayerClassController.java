@@ -15,46 +15,39 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping(path = "/api/playerclass")
-public class PlayerClassController {
+public class PlayerclassController {
 
     @Autowired
 
-    private PlayerClassRepository playerClassRepository;
+    private PlayerclassRepository playerclassRepository;
 
     @GetMapping(path = "")
-    public Iterable<PlayerClass>getAllPlayerClasses() {
-        return playerClassRepository.findAll();
+    public Iterable<Playerclass>getAllPlayerclasses() {
+        return playerclassRepository.findAll();
     }
 
     @GetMapping(path = "/{id}")
-    public PlayerClass getPlayerClass(@PathVariable(value = "id") Integer id) {
-        Optional<PlayerClass> playerClass = playerClassRepository.findById(id);
-        return playerClass.get();
+    public Playerclass getPlayerclass(@PathVariable(value = "id") Integer id) {
+        Optional<Playerclass> playerclass = playerclassRepository.findById(id);
+        return playerclass.get();
     }
 
     @PostMapping(path = "/")
-    public PlayerClass createPlayerClasses(@RequestBody PlayerClass playerClass) {
-        return playerClassRepository.save(playerClass);
+    public Playerclass createPlayerclass(@RequestBody Playerclass playerclass) {
+        return playerclassRepository.save(playerclass);
     }
 
     @PutMapping(path = "/{id}")
-    public @ResponseBody String updatePlayerClasses(@PathVariable(value = "id") Integer id, @RequestBody PlayerClass playerClassDetails) {
-        Optional<PlayerClass> optionalPlayerClass = playerClassRepository.findById(id);
-        PlayerClass playerClass = optionalPlayerClass.get();
+    public @ResponseBody String updatePlayerclass(@PathVariable(value = "id") Integer id, @RequestBody Playerclass playerclassDetails) {
+        Optional<Playerclass> optionalPlayerclass = playerclassRepository.findById(id);
+        Playerclass playerclass = optionalPlayerclass.get();    
 
-        playerClass.setPlayerclassDesc(playerClassDetails.getPlayerclassDesc());
-        playerClass.setPlayerclassName(playerClassDetails.getPlayerclassName());
-        playerClass.setPlayerclassUrl(playerClassDetails.getPlayerclassUrl());
+        playerclass.setPlayerclassDesc(playerclassDetails.getPlayerclassDesc());
+        playerclass.setPlayerclassName(playerclassDetails.getPlayerclassName());
+        playerclass.setPlayerclassUrl(playerclassDetails.getPlayerclassUrl());
 
-        playerClassRepository.save(playerClassDetails);
+        playerclassRepository.save(playerclassDetails);
         return "Updated";
     }
 
-    @DeleteMapping(path = "/{id}")
-    public @ResponseBody String deletePlayerClass(@PathVariable(value = "id") Integer id) {
-        playerClassRepository.deleteById(id);
-            return "Deleted";
-        
-    }
-    
 }

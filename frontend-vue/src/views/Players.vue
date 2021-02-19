@@ -18,7 +18,7 @@
                     <tr v-for="player in players" :key="player.id">
                         <td>{{player.id}}</td>
                         <td>{{player.firstName}} {{player.lastName}}</td>
-                        <td>{{player.characterName}}</td>
+                        <td><a @click="playerDetails(player.id)">{{player.characterName}}</a></td>
                     </tr>
                 </tbody>
             </table>
@@ -28,9 +28,16 @@
 
 <script>
 export default {
-    data:() => ({
+    name: "Players",
+    data: () => ({
         players:[]
     }),
+
+    methods: {
+        playerDetails(playerId) {
+            this.$router.push('player/' + playerId);
+        }
+    },
     async mounted() {
         console.log('players mounted being')
         const{data} = await this.$http.get('http://localhost:8080/api/player');
