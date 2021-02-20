@@ -41,7 +41,7 @@ const routes = [
   {
     path: '/playerclass/:id',
     name: 'Playerclass',
-    component: () => import ('../views/PlayerclassDetails.vue')
+    component: () => import ('../views/PlayerclassesDetails.vue')
   }, 
   {
     path: '/players',

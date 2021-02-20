@@ -2,6 +2,6 @@ package com.aim.java.FinalProject.playerDB.DungeonsAndDragons.playerclass;
 
 import org.springframework.data.repository.CrudRepository;
 
-public interface PlayerclassRepository extends CrudRepository<Playerclass, Integer>{
+public interface PlayerclassesRepository extends CrudRepository<Playerclasses, Integer>{
     
 }

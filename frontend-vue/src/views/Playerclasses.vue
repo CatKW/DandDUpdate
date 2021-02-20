@@ -15,8 +15,8 @@
                 <tbody>
                     <tr v-for="playerclass in playerclasses" :key="playerclass.id">
                         <td>{{playerclass.id}}</td>
-                        <td><a @click="playerclassDetails(playerclass.id)">{{playerclass.playerclassName}}</a></td>
-                        <td>{{playerclass.playerclassDesc}}</td>
+                        <td><a @click="playerclassDetails(playerclass.id)">{{playerclass.name}}</a></td>
+                        <td>{{playerclass.description}}</td>
                     </tr>
                 </tbody>
             </table>
@@ -26,8 +26,9 @@
 
 <script>
 export default {
+    name: "Playerclasses",
     data: () => ({
-        playerclasses:[]
+        playerclasses:{},
     }),
 
     methods: {
