@@ -46,7 +46,7 @@ public class PlayersController {
         players.setAlignment(playersDetails.getAlignment());
         players.setArmors(playersDetails.getArmors());
         players.setCharacterName(playersDetails.getCharacterName());
-        players.setPlayerclasses(playersDetails.getPlayerclasses());
+        players.setCreatures(playersDetails.getCreatures());
         players.setRaces(playersDetails.getRaces());
         players.setWeapons(playersDetails.getWeapons());
 

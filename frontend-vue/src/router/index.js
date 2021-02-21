@@ -34,14 +34,14 @@ const routes = [
   component: () => import ('../views/Races.vue')
   },
   {
-    path: '/playerclasses',
-    name: 'Playerclasses',
-    component: () => import ('../views/Playerclasses.vue')
+    path: '/creatures',
+    name: 'Creatures',
+    component: () => import ('../views/Creatures.vue')
   },
   {
-    path: '/playerclass/:id',
-    name: 'Playerclass',
-    component: () => import ('../views/PlayerclassesDetails.vue')
+    path: '/creature/:id',
+    name: 'Creature',
+    component: () => import ('../views/CreatureDetails.vue')
   }, 
   {
     path: '/players',

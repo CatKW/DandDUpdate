@@ -7,7 +7,7 @@
       <router-link to="/weapons">Weapons</router-link> |
       <router-link to="/alignments">Alignments</router-link> |
       <router-link to="/races">Races</router-link> |
-      <router-link to="/playerclasses">Classes</router-link> |
+      <router-link to="/creatures">Classes</router-link> |
     </div>
     <router-view/>
   </div>

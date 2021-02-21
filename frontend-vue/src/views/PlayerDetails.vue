@@ -4,8 +4,7 @@
         <ul>
             <li>{{player.armors.name}}</li>
             <li>{{player.alignment.name}}</li>
-            <li>{{player.playerclass.name}}</li>
-        
+            <li>{{player.creatures.name}}</li>
             <li>{{player.races.name}}</li>
             <li>{{player.weapons.name}}</li>
         

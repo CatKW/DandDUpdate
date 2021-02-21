@@ -15,7 +15,7 @@ import javax.persistence.Table;
 
 import com.aim.java.FinalProject.playerDB.DungeonsAndDragons.alignment.Alignment;
 import com.aim.java.FinalProject.playerDB.DungeonsAndDragons.armor.Armors;
-import com.aim.java.FinalProject.playerDB.DungeonsAndDragons.playerclass.Playerclasses;
+import com.aim.java.FinalProject.playerDB.DungeonsAndDragons.creatures.Creatures;
 import com.aim.java.FinalProject.playerDB.DungeonsAndDragons.races.Races;
 import com.aim.java.FinalProject.playerDB.DungeonsAndDragons.stats.Stats;
 import com.aim.java.FinalProject.playerDB.DungeonsAndDragons.weapons.Weapons;
@@ -33,8 +33,8 @@ public class Players {
     private String characterName;
 
     @ManyToOne
-    @JoinColumn(name = "playerclass_id", nullable = false)
-    private Playerclasses playerclasses;
+    @JoinColumn(name = "creature_id", nullable = false)
+    private Creatures creatures;
 
     @ManyToOne
     @JoinColumn(name = "race_id", nullable = false)
@@ -91,13 +91,7 @@ public class Players {
         this.characterName = characterName;
     }
 
-    public Playerclasses getPlayerclasses() {
-        return playerclasses;
-    }
-
-    public void setPlayerclasses(Playerclasses playerclasses) {
-        this.playerclasses = playerclasses;
-    }
+    
 
     public Races getRaces() {
         return races;
@@ -137,6 +131,14 @@ public class Players {
 
     public void setStats(List<Stats> stats) {
         this.stats = stats;
+    }
+
+    public Creatures getCreatures() {
+        return creatures;
+    }
+
+    public void setCreatures(Creatures creatures) {
+        this.creatures = creatures;
     }
 
 }
