@@ -30,12 +30,6 @@ export default {
         creatures:{},
     }),
 
-    methods: {
-        creatureDetails(creatureId) {
-            this.$router.push('creature/' + creatureId);
-        }
-    },
-
     async mounted() {
         console.log('creatures being mounted')
         const{data} = await this.$http.get('http://localhost:8080/api/creature');

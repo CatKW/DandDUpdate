@@ -41,8 +41,7 @@ public class PlayersController {
         Optional<Players> optionalPlayers = playersRepository.findById(id);
 
         Players players = optionalPlayers.get();
-        players.setFirstName(playersDetails.getFirstName());
-        players.setLastName(playersDetails.getLastName());
+        players.setPlayerName(playersDetails.getPlayerName());
         players.setAlignment(playersDetails.getAlignment());
         players.setArmors(playersDetails.getArmors());
         players.setCharacterName(playersDetails.getCharacterName());

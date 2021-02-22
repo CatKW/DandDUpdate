@@ -4,6 +4,8 @@
             <h1 class="title">Dungeons and Dragons: Your Characters</h1>
         </div>
 
+        <router-link to="players/add" tag="button" class="button is-primary"> Add Player</router-link>
+
         <div class="content">
             <table>
                 <thead>
@@ -17,7 +19,7 @@
                 <tbody>
                     <tr v-for="player in players" :key="player.id">
                         <td>{{player.id}}</td>
-                        <td>{{player.firstName}} {{player.lastName}}</td>
+                        <td>{{player.playerName}}</td>
                         <td><a @click="playerDetails(player.id)">{{player.characterName}}</a></td>
                     </tr>
                 </tbody>
@@ -46,3 +48,9 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+button{
+  float: right;
+}
+</style>

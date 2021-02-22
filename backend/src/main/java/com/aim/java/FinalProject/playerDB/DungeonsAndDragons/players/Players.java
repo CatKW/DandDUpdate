@@ -28,8 +28,8 @@ public class Players {
     @Column(name = "player_id")
 
     private Integer id;
-    private String firstName;
-    private String lastName;
+    private String playerName;
+    
     private String characterName;
 
     @ManyToOne
@@ -67,21 +67,7 @@ public class Players {
         this.id = id;
     }
 
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
+    
 
     public String getCharacterName() {
         return characterName;
@@ -139,6 +125,14 @@ public class Players {
 
     public void setCreatures(Creatures creatures) {
         this.creatures = creatures;
+    }
+
+    public String getPlayerName() {
+        return playerName;
+    }
+
+    public void setPlayerName(String playerName) {
+        this.playerName = playerName;
     }
 
 }

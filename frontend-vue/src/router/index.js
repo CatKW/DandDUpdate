@@ -38,11 +38,7 @@ const routes = [
     name: 'Creatures',
     component: () => import ('../views/Creatures.vue')
   },
-  {
-    path: '/creature/:id',
-    name: 'Creature',
-    component: () => import ('../views/CreatureDetails.vue')
-  }, 
+  
   {
     path: '/players',
     name: 'Players',
@@ -52,7 +48,13 @@ const routes = [
     path: '/player/:id',
     name: 'Player',
     component: () => import ('../views/PlayerDetails.vue')
+  }, 
+  {
+    path: '/players/add',
+    name: 'AddPlayers',
+    component: () => import ('../views/AddPlayer.vue')
   }
+
 
 ]
 
