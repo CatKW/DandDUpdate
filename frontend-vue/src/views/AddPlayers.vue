@@ -28,6 +28,7 @@
 
 <script>
 export default {
+    name: "AddPlayers",
     data:() => ({
         player: {
             playerName: "",
@@ -36,18 +37,15 @@ export default {
    }),
     methods: {
         async save() {
-            console.log('AddPlayer.save() player=', this.player)
+            console.log('AddPlayers.save() player=', this.player)
             const response = await this.$http.post('http://localhost:8080/api/player/', this.player);
-            console.log('AddPlayer.save() response=', response);
+            console.log('AddPlayers.save() response=', response);
+            this.$router.push({path: '/players'});
         },
         cancel () {
             this.$router.push({path: '/players'})
         }, 
-        async getPlayer() {
-            const data = await this.$http.get("http://localhost:8080/api/player");
-            console.log('getPlayers data', data)
-            return data;
-        }
+        
     }
 }
 </script>

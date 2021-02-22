@@ -35,6 +35,7 @@
             <div class="control">
                 <input class="input" type="number" v-model="armor.weight" placeholder="Weight in lbs"/>
             </div>
+        </div>
 
             <div class="field is-grouped">
                 <div class="control">
@@ -45,7 +46,6 @@
                 </div>
             </div>
         </div>
-    </div>
 </template>
 
 <script>
@@ -65,6 +65,7 @@ export default {
             console.log('AddArmor.save() armor=', this.armor)
             const response = await this.$http.post('http://localhost:8080/api/armor/', this.armor);
             console.log('AddArmor.save() response=', response);
+            this.$router.push({path: '/armors'})
         }, 
         cancel() {
             this.$router.push({path: '/armors'})

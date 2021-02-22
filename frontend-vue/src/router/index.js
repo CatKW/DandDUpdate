@@ -29,6 +29,11 @@ const routes = [
     component: () => import ('../views/Weapons.vue')
   },
   {
+    path: "/weapon/add",
+    name: 'AddWeapon',
+    component: () => import ('../views/AddWeapon.vue')
+  },
+  {
     path: '/alignments',
     name: 'Alignments',
     component: () => import ('../views/Alignments.vue')
@@ -42,6 +47,11 @@ const routes = [
     path: '/creatures',
     name: 'Creatures',
     component: () => import ('../views/Creatures.vue')
+  },
+  {
+    path: '/creature/:id',
+    name: 'Creature',
+    component: () => import ('../views/CreatureDetail.vue')
   },
   
   {
@@ -57,7 +67,7 @@ const routes = [
   {
     path: '/players/add',
     name: 'AddPlayers',
-    component: () => import ('../views/AddPlayer.vue')
+    component: () => import ('../views/AddPlayers.vue')
   }
 
 

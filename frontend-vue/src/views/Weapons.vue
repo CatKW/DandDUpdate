@@ -5,6 +5,8 @@
             <p class="information">This is just some of the weapons your character may be able to utilize</p>
         </div>
 
+        <router-link to="weapon/add" tag="button" class="button is-primary">Add Weapon</router-link>
+
         <div class="content">
             <table id="weapons" class="table">
                 <thead>

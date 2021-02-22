@@ -15,7 +15,7 @@
                 <tbody>
                     <tr v-for="creature in creatures" :key="creature.id">
                         <td>{{creature.id}}</td>
-                        <td><a @click="creatureDetails(creature.id)">{{creature.name}}</a></td>
+                        <td><a @click="creatureDetail(creature.id)">{{creature.name}}</a></td>
                         <td>{{creature.description}}</td>
                     </tr>
                 </tbody>
@@ -29,6 +29,12 @@ export default {
     data: () => ({
         creatures:{},
     }),
+
+    methods: {
+        creatureDetail(creatureId){
+            this.$router.push('creature/' + creatureId);
+        }
+    },
 
     async mounted() {
         console.log('creatures being mounted')
