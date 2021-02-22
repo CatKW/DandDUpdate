@@ -1,4 +1,4 @@
-package com.aim.java.FinalProject.playerDB.DungeonsAndDragons.alignment;
+package com.aim.java.FinalProject.playerDB.DungeonsAndDragons.alignments;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,7 +9,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "alignment")
-public class Alignment {
+public class Alignments {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "alignment_id")

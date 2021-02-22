@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(path = "/api/player")
+@RequestMapping(path = "/api/players")
 public class PlayersController {
     
     @Autowired
@@ -42,7 +42,7 @@ public class PlayersController {
 
         Players players = optionalPlayers.get();
         players.setPlayerName(playersDetails.getPlayerName());
-        players.setAlignment(playersDetails.getAlignment());
+        players.setAlignment(playersDetails.getAlignments());
         players.setArmors(playersDetails.getArmors());
         players.setCharacterName(playersDetails.getCharacterName());
         players.setCreatures(playersDetails.getCreatures());

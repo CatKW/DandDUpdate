@@ -59,16 +59,15 @@ const routes = [
     name: 'Players',
     component: () => import('../views/Players.vue')
   },
+
+
   {
-    path: '/player/:id',
-    name: 'Player',
-    component: () => import ('../views/PlayerDetails.vue')
+    path: '/player/add',
+    name: 'AddPlayer',
+    component: () => import ('../views/AddPlayer.vue')
   }, 
-  {
-    path: '/players/add',
-    name: 'AddPlayers',
-    component: () => import ('../views/AddPlayers.vue')
-  }
+  
+
 
 
 ]

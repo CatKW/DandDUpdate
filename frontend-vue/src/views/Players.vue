@@ -4,8 +4,7 @@
             <h1 class="title">Dungeons and Dragons: Your Characters</h1>
         </div>
 
-        <router-link to="players/add" tag="button" class="button is-primary"> Add Player</router-link>
-
+        <router-link to="player/add" tag="button" class="button is-primay">Add Your Player</router-link>
         <div class="content">
             <table>
                 <thead>
@@ -13,6 +12,11 @@
                         <th>#</th>
                         <th>Player Name</th>
                         <th>Character Name</th>
+                        <th>Race</th>
+                        <th>Class</th>
+                        <th>Alignment</th>
+                        <th>Weapon</th>
+                        <th>Armor</th>
                     </tr>
                 </thead>
 
@@ -20,7 +24,14 @@
                     <tr v-for="player in players" :key="player.id">
                         <td>{{player.id}}</td>
                         <td>{{player.playerName}}</td>
-                        <td><a @click="playerDetails(player.id)">{{player.characterName}}</a></td>
+                        <td>{{player.characterName}}</td>
+                        <td>{{player.races.name}}</td>
+                        <td>{{player.creatures.name}}</td>
+                        <td>{{player.alignments.name}}</td>
+                        <td>{{player.weapons.name}}</td>
+                        <td>{{player.armors.name}}</td>
+                      
+                        
                     </tr>
                 </tbody>
             </table>
@@ -35,14 +46,10 @@ export default {
         players:[]
     }),
 
-    methods: {
-        playerDetails(playerId) {
-            this.$router.push('player/' + playerId);
-        }
-    },
+    
     async mounted() {
         console.log('players mounted being')
-        const{data} = await this.$http.get('http://localhost:8080/api/player');
+        const{data} = await this.$http.get('http://localhost:8080/api/players');
         console.log('players mounted data', data)
         this.players = data;
     }

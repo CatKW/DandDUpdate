@@ -13,7 +13,7 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import com.aim.java.FinalProject.playerDB.DungeonsAndDragons.alignment.Alignment;
+import com.aim.java.FinalProject.playerDB.DungeonsAndDragons.alignments.Alignments;
 import com.aim.java.FinalProject.playerDB.DungeonsAndDragons.armor.Armors;
 import com.aim.java.FinalProject.playerDB.DungeonsAndDragons.creatures.Creatures;
 import com.aim.java.FinalProject.playerDB.DungeonsAndDragons.races.Races;
@@ -21,7 +21,7 @@ import com.aim.java.FinalProject.playerDB.DungeonsAndDragons.stats.Stats;
 import com.aim.java.FinalProject.playerDB.DungeonsAndDragons.weapons.Weapons;
 
 @Entity
-@Table(name = "player")
+@Table(name = "players")
 public class Players {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -33,26 +33,26 @@ public class Players {
     private String characterName;
 
     @ManyToOne
-    @JoinColumn(name = "creature_id", nullable = false)
+    @JoinColumn(name = "creature_id")
     private Creatures creatures;
 
     @ManyToOne
-    @JoinColumn(name = "race_id", nullable = false)
+    @JoinColumn(name = "race_id")
     private Races races;
 
  
 
     @ManyToOne
-    @JoinColumn(name = "armor_id", nullable = false)
+    @JoinColumn(name = "armor_id")
     private Armors armors;
 
     @ManyToOne
-    @JoinColumn(name = "weapons_id", nullable = false)
+    @JoinColumn(name = "weapon_id")
     private Weapons weapons;
 
     @ManyToOne
-    @JoinColumn(name = "alignment_id", nullable = false)
-    private Alignment alignment;
+    @JoinColumn(name = "alignment_id")
+    private Alignments alignments;
 
     @ManyToMany
     @JoinTable(name = "player_stats", joinColumns = @JoinColumn (name = "player_id"), inverseJoinColumns = @JoinColumn(name = "stats_id"))
@@ -103,12 +103,12 @@ public class Players {
         this.weapons = weapons;
     }
 
-    public Alignment getAlignment() {
-        return alignment;
+    public Alignments getAlignments() {
+        return alignments;
     }
 
-    public void setAlignment(Alignment alignment) {
-        this.alignment = alignment;
+    public void setAlignment(Alignments alignments) {
+        this.alignments = alignments;
     }
 
     public List<Stats> getStats() {

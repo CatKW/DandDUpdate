@@ -12,7 +12,7 @@ import javax.persistence.Table;
 public class Weapons {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "weapons_id")
+    @Column(name = "weapon_id")
 
     private Integer id;
     private String type;
