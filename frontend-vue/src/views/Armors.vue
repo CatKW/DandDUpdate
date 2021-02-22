@@ -4,6 +4,9 @@
     <h1 class="title">Dungeons and Dragons: Armor</h1>
     </div>
 
+
+    <router-link to="armor/add" tag="button" class="button is-primary">Add Armor</router-link>
+
     <div class="content">
       <table id="armors" class="table">
         <thead>
