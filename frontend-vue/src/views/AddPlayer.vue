@@ -15,6 +15,7 @@
                 <input id="characterName" class="input" type="text" v-model="player.characterName" placeholder="Your Character Name Here"/>
             </div>
         </div>
+        
 
         <div class="field">
             <label class="label">Race</label>
@@ -67,7 +68,7 @@
                 </label>
             </div>
         </div>
-  
+ 
 
         
 
@@ -96,12 +97,14 @@ export default {
             weapon:{},
             armor: {},
             race: {}
+        
         },
         alignments: [],
         creatures: [], 
         weapons:[], 
         armors: [],
-        races: []       
+        races: []
+       
     }),
     methods: {
         async save () {
@@ -142,7 +145,8 @@ export default {
             const {data} = await this.$http.get('http://loclahost:8080/api/players');
             console.log('getPlayers() data', data)
             return data;
-        }
+        },
+     
     
         
        
@@ -153,6 +157,7 @@ export default {
         this.weapons = await this.getWeapons();
         this.armors = await this.getArmors();
         this.races = await this.getRaces();
+      
     }
 }
 </script>

@@ -33,25 +33,25 @@ public class Players {
     private String characterName;
 
     @ManyToOne
-    @JoinColumn(name = "creature_id")
+    @JoinColumn(name = "creature_id", nullable = false)
     private Creatures creatures;
 
     @ManyToOne
-    @JoinColumn(name = "race_id")
+    @JoinColumn(name = "race_id", nullable = false)
     private Races races;
 
  
 
     @ManyToOne
-    @JoinColumn(name = "armor_id")
+    @JoinColumn(name = "armor_id", nullable = false)
     private Armors armors;
 
     @ManyToOne
-    @JoinColumn(name = "weapon_id")
+    @JoinColumn(name = "weapon_id",nullable = false)
     private Weapons weapons;
 
     @ManyToOne
-    @JoinColumn(name = "alignment_id")
+    @JoinColumn(name = "alignment_id", nullable = false)
     private Alignments alignments;
 
     @ManyToMany

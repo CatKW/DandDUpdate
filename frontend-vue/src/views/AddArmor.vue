@@ -3,30 +3,32 @@
         <h1 class="title">Add Armor</h1>
 
         <div class="field">
-            <label class="label">Armor Type</label>
+            <label class="label">Armor: Type</label>
             <div  class="control">
                 <input class="input" type="text" v-model="armor.type" placeholder="Armor Type"/>
             </div>
-        </div>
+       </div>
 
         <div class="field">
-            <label class="label">Armor Name</label>
-            <div class="contorl">
-                <class="input" type="text" v-model="armor.name" placeholder="Armor Name"/>
+            <label class="label">Armor: Name</label>
+            <div class="control">
+                <input class="input" type="text" v-model="armor.name" placeholder="Armor Type"/>
             </div>
         </div>
+
+        
 
         <div class="field">
             <label class="label">Armor: Class Number</label>
             <div class="control">
-                <input class="input" type="number" v-model="armor.classNumber" placeholder="Class Number"/>
+                <input class="input" type="number" v-model="armor.classNumber" placeholder="example: 11"/>
             </div>
         </div>
 
         <div class="field">
             <label class="label">Armor: Modifier</label>
             <div class="contorl">
-                <input class="input" type="text" v-model="armor.modifier" placeholder="+ Modifier Type"/>
+                <input class="input" type="text" v-model="armor.modifier" placeholder="+ example + Dex Modifier(max 2)"/>
             </div>
         </div>
 
@@ -78,3 +80,4 @@ export default {
     }
 }
 </script>
+

@@ -46,3 +46,8 @@
     }  
   }
   </script>
+<style scoped>
+button {
+  float: right;
+}
+</style>
