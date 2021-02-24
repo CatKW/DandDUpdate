@@ -4,7 +4,7 @@
 
         <div class="field">
             <label class="label">Armor Type</label>
-            <div class="control">
+            <div  class="control">
                 <input class="input" type="text" v-model="armor.type" placeholder="Armor Type"/>
             </div>
         </div>
@@ -12,7 +12,7 @@
         <div class="field">
             <label class="label">Armor Name</label>
             <div class="contorl">
-                <input class="input" type="text" v-model="armor.name" placeholder="Armor Name"/>
+                <class="input" type="text" v-model="armor.name" placeholder="Armor Name"/>
             </div>
         </div>
 

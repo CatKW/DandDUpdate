@@ -19,9 +19,9 @@
         <div class="field">
             <label class="label">Race</label>
             <div class="select">
-                <select v-model="player.race.id">
-                    <option v-for="race in races" :value="race.id" :key="race.id">
-                        {{race.id}}{{race.name}}
+                <select v-model="player.races">
+                    <option v-for="race in races" :value="race" :key="race.id">
+                        {{race.name}}
                     </option>
                 </select>
             </div>
@@ -30,9 +30,9 @@
         <div class="field">
             <label class="label">Class</label>
             <div class="select">
-                <select v-model="player.creature.id">
-                    <option v-for="creature in creatures" :value="creature.id" :key="creature.id">
-                        {{creature.id}} {{creature.name}}
+                <select v-model="player.creatures">
+                    <option v-for="creature in creatures" :value="creature" :key="creature.id">
+                        {{creature.name}}
                     </option>
                 </select>
             </div>
@@ -42,7 +42,7 @@
             <div class="select">
                 <select v-model="player.alignment.id">
                     <option v-for="alignment in alignments" :value="alignment.id" :key="alignment.id">
-                        {{alignment.id}} {{alignment.name}}
+                        {{alignment.name}}
                     </option>
                 </select>
             </div>
@@ -52,8 +52,8 @@
            <label class="label">Weapon</label>
            <div class="control" v-for="weapon in weapons" :key="weapon.id">
                <label :for="weapon.id" class="radio">
-                   <input type="radio" :id="'weapon-' + weapon.id" :value="weapon" v-model="player.weapon" class="radio"/>
-                   {{weapon.id}} {{weapon.name}}
+                   <input type="radio" :id="weapon.id" :value="weapon" v-model="player.weapons" class="radio"/>
+                   {{weapon.name}}
                </label>
            </div>
         </div>
