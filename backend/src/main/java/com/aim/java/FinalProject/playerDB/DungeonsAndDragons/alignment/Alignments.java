@@ -1,4 +1,4 @@
-package com.aim.java.FinalProject.playerDB.DungeonsAndDragons.alignments;
+package com.aim.java.FinalProject.playerDB.DungeonsAndDragons.alignment;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

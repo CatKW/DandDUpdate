@@ -1,4 +1,4 @@
-package com.aim.java.FinalProject.playerDB.DungeonsAndDragons.creatures;
+package com.aim.java.FinalProject.playerDB.DungeonsAndDragons.race;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,16 +8,16 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "creature")
-public class Creatures {
+@Table(name = "races")
+public class Races {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "creature_id")
-    private Integer id;
+    @Column(name = "race_id")
 
+    private Integer id;
     private String name;
     private String description;
-    private String video;
+
 
     public Integer getId() {
         return id;
@@ -43,11 +43,4 @@ public class Creatures {
         this.description = description;
     }
 
-    public String getVideo() {
-        return video;
-    }
-
-    public void setVideo(String video) {
-        this.video = video;
-    }
 }

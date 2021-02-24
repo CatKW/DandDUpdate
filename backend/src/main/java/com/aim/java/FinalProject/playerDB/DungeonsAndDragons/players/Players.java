@@ -13,10 +13,10 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import com.aim.java.FinalProject.playerDB.DungeonsAndDragons.alignments.Alignments;
+import com.aim.java.FinalProject.playerDB.DungeonsAndDragons.alignment.Alignments;
 import com.aim.java.FinalProject.playerDB.DungeonsAndDragons.armor.Armors;
-import com.aim.java.FinalProject.playerDB.DungeonsAndDragons.creatures.Creatures;
-import com.aim.java.FinalProject.playerDB.DungeonsAndDragons.races.Races;
+import com.aim.java.FinalProject.playerDB.DungeonsAndDragons.creature.Creatures;
+import com.aim.java.FinalProject.playerDB.DungeonsAndDragons.race.Races;
 import com.aim.java.FinalProject.playerDB.DungeonsAndDragons.stats.Stats;
 import com.aim.java.FinalProject.playerDB.DungeonsAndDragons.weapons.Weapons;
 

@@ -21,7 +21,7 @@
             <div class="select">
                 <select v-model="player.race.id">
                     <option v-for="race in races" :value="race.id" :key="race.id">
-                        {{race.name}}
+                        {{race.id}}{{race.name}}
                     </option>
                 </select>
             </div>
@@ -32,17 +32,17 @@
             <div class="select">
                 <select v-model="player.creature.id">
                     <option v-for="creature in creatures" :value="creature.id" :key="creature.id">
-                        {{creature.name}}
+                        {{creature.id}} {{creature.name}}
                     </option>
                 </select>
             </div>
         </div>
-        <div class="field">
+        <div class="field"> 
             <label class="label">Alignment</label>
             <div class="select">
                 <select v-model="player.alignment.id">
                     <option v-for="alignment in alignments" :value="alignment.id" :key="alignment.id">
-                        {{alignment.name}}
+                        {{alignment.id}} {{alignment.name}}
                     </option>
                 </select>
             </div>
@@ -53,7 +53,7 @@
            <div class="control" v-for="weapon in weapons" :key="weapon.id">
                <label :for="weapon.id" class="radio">
                    <input type="radio" :id="'weapon-' + weapon.id" :value="weapon" v-model="player.weapon" class="radio"/>
-                   {{weapon.name}}
+                   {{weapon.id}} {{weapon.name}}
                </label>
            </div>
         </div>
@@ -89,8 +89,8 @@ export default {
     name: "AddPlayer",
     data: () => ({
         player: {
-            playerName: "",
-            characterName: "",
+            playerName: null,
+            characterName: null,
             alignment: {},
             creature:{},
             weapon:{},
@@ -136,6 +136,11 @@ export default {
         async getRaces() {
             const {data} = await this.$http.get('http://localhost:8080/api/races');
             console.log('getRaces() data', data)
+            return data;
+        },
+        async getPlayers() {
+            const {data} = await this.$http.get('http://loclahost:8080/api/players');
+            console.log('getPlayers() data', data)
             return data;
         }
     

@@ -1,4 +1,4 @@
-package com.aim.java.FinalProject.playerDB.DungeonsAndDragons.creatures;
+package com.aim.java.FinalProject.playerDB.DungeonsAndDragons.creature;
 
 import org.springframework.data.repository.CrudRepository;
 

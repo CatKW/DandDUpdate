@@ -1,4 +1,4 @@
-package com.aim.java.FinalProject.playerDB.DungeonsAndDragons.races;
+package com.aim.java.FinalProject.playerDB.DungeonsAndDragons.race;
 
 import org.springframework.data.repository.CrudRepository;
 
