@@ -15,16 +15,14 @@
       <table id="armors" class="table">
         <thead>
           <tr>
-            <th>#</th>
             <th>Type</th>
             <th>Name</th>
-            <th>Class and Modifier</th>
+            <th>Class Number and Modifier Type</th>
             <th>Weight (lbs)</th>
           </tr>
         </thead>
         <tbody>
           <tr v-for="armor in armors" :key="armor.id">
-            <td>{{armor.id}}</td>
             <td>{{armor.type}}</td>
             <td>{{armor.name}}</td>
             <td>{{armor.classNumber}} {{armor.modifier}}</td>
@@ -52,7 +50,6 @@
   </script>
 <style scoped>
 .button {
-    float: right;
     margin-top: 10px;
     margin-bottom: 10px;
     background-color: darkblue;

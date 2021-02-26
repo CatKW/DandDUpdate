@@ -11,14 +11,12 @@
             <table id="creatures" class="table">
                 <thead>
                     <tr>
-                        <th>#</th>
-                        <th>Name</th>
+                        <th>Class</th>
                         <th>Description</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr v-for="creature in creatures" :key="creature.id">
-                        <td>{{creature.id}}</td>
                         <td><a @click="creatureDetail(creature.id)">{{creature.name}}</a></td>
                         <td>{{creature.description}}</td>
                     </tr>

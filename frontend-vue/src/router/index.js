@@ -66,6 +66,11 @@ const routes = [
     name: 'AddPlayer',
     component: () => import ('../views/AddPlayer.vue')
   }, 
+  {
+    path: '/levels',
+    name: 'Levels',
+    component: () => import ('../views/Levels.vue')
+  }
   
 
 

@@ -16,14 +16,12 @@
             <table id="races" class="table">
                 <thead>
                     <tr>
-                        <th>#</th>
                         <th>Name</th>
                         <th><a class="description" v-bind:href="'https://www.dndbeyond.com/races'">Description</a></th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr v-for="race in races" :key="race.id">
-                        <td>{{race.id}}</td>
                         <td>{{race.name}}</td>
                         <td>{{race.description}}</td>
                     </tr>
@@ -51,6 +49,9 @@ export default {
 p {
     font-style: italic;
     color: darkblue;
+    text-align: center;
+    margin-top: .5em;
+    margin-bottom: .5em;
 }
 
 .description:hover {

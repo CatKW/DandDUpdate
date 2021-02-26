@@ -48,6 +48,7 @@ public class PlayersController {
         players.setCreatures(playersDetails.getCreatures());
         players.setRaces(playersDetails.getRaces());
         players.setWeapons(playersDetails.getWeapons());
+        players.setLevel(playersDetails.getLevel());
 
         playersRepository.save(playersDetails);
         return "Updated";

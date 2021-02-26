@@ -10,7 +10,6 @@
             <table>
                 <thead>
                     <tr>
-                        <th>#</th>
                         <th>Player Name</th>
                         <th>Character Name</th>
                         <th>Race</th>
@@ -18,12 +17,12 @@
                         <th>Alignment</th>
                         <th>Weapon</th>
                         <th>Armor</th>
+                        <th>Level / Bonus</th>
                     </tr>
                 </thead>
 
                 <tbody>
                     <tr v-for="player in players" :key="player.id">
-                        <td>{{player.id}}</td>
                         <td>{{player.playerName}}</td>
                         <td>{{player.characterName}}</td>
                         <td>{{player.races.name}}</td>
@@ -31,6 +30,7 @@
                         <td>{{player.alignments.name}}</td>
                         <td>{{player.weapons.name}}</td>
                         <td>{{player.armors.name}}</td>
+                        <td>{{player.level.level}}    /    {{player.level.proficiencyBonus}}</td>
                       
                         
                     </tr>
@@ -59,7 +59,7 @@ export default {
 
 <style>
 .button {
-    float: right;
+    margin-left: 45%;
     margin-top: 10px;
     margin-bottom: 10px;
     background-color: darkblue;
@@ -74,8 +74,15 @@ export default {
 .title{
     color: darkblue;  
 }
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-
+.title {
+    text-align: center;
+}
 
 
 </style>

@@ -10,14 +10,12 @@
             <table id="alignment" class="table">
                 <thead>
                     <tr>
-                        <th>#</th>
-                        <th>Name</th>
+                        <th>Alignment</th>
                         <th><a class="description" v-bind:href="'http://easydamus.com/alignment.html'">Description</a></th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr v-for="alignment in alignments" :key="alignment.id">
-                        <td>{{alignment.id}}</td>
                         <td>{{alignment.name}}</td>
                         <td>{{alignment.description}}</td>
                     </tr>
@@ -46,6 +44,9 @@ export default {
 p {
     font-style: italic;
     color: darkblue;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 .description:hover {

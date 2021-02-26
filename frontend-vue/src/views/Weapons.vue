@@ -11,7 +11,6 @@
             <table id="weapons" class="table">
                 <thead>
                     <tr>
-                        <th>#</th>
                         <th>Type</th>
                         <th>Name</th>
                         <th>Damage Roll</th>
@@ -20,7 +19,6 @@
                 </thead>
                 <tbody>
                     <tr v-for="weapon in weapons" :key="weapon.id">
-                        <td>{{weapon.id}}</td>
                         <td>{{weapon.type}}</td>
                         <td>{{weapon.name}}</td>
                         <td>{{weapon.damage}}</td>
@@ -49,7 +47,6 @@ export default {
 
 <style scoped>
 .button {
-    float: right;
     margin-top: 10px;
     margin-bottom: 10px;
     background-color: darkblue;

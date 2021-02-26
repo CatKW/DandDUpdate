@@ -1,8 +1,9 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
+     
       <router-link to = "/players">My Players</router-link> |
+      <router-link to = "/levels">Level Chart</router-link>  |
       <router-link to="/alignments">Alignments</router-link> |
       <router-link to="/races">Races</router-link> |
       <router-link to="/creatures">Classes</router-link> |
@@ -31,8 +32,6 @@
     margin-right: 35%;
     margin-left: 25%;
     margin-bottom: 3em;
-   
-
 }
 
 #nav a {

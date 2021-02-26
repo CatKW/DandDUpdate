@@ -15,6 +15,17 @@
                 <input id="characterName" class="input" type="text" v-model="player.characterName" placeholder="Your Character Name Here"/>
             </div>
         </div>
+
+        <div class="field">
+            <label class="label">Level</label>
+            <div class="select">
+                <select v-model="player.level">
+                    <option v-for="level in levels" :value="level" :key="level.id">
+                        {{level.level}}
+                    </option>
+                </select>
+            </div>
+        </div>
         
 
         <div class="field">
@@ -96,14 +107,16 @@ export default {
             creature:{},
             weapon:{},
             armor: {},
-            race: {}
+            race: {},
+            level: {}
         
         },
         alignments: [],
         creatures: [], 
         weapons:[], 
         armors: [],
-        races: []
+        races: [],
+        levels: []
        
     }),
     methods: {
@@ -142,10 +155,15 @@ export default {
             return data;
         },
         async getPlayers() {
-            const {data} = await this.$http.get('http://loclahost:8080/api/players');
+            const {data} = await this.$http.get('http://localhost:8080/api/players');
             console.log('getPlayers() data', data)
             return data;
         },
+        async getLevels() {
+            const {data} = await this.$http.get('http://localhost:8080/api/level');
+            console.log('getLevels() data', data)
+            return data;
+        }
      
     
         
@@ -157,6 +175,7 @@ export default {
         this.weapons = await this.getWeapons();
         this.armors = await this.getArmors();
         this.races = await this.getRaces();
+        this.levels = await this.getLevels();
       
     }
 }
