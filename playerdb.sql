@@ -1,6 +1,6 @@
 CREATE DATABASE playerdb;
  USE playerdb;
-drop table pclass;
+
 
 drop table creature;
 CREATE TABLE creature (
@@ -46,15 +46,6 @@ insert into races (name, description) values ('Tiefling', 'To be greeted with st
 
 select * from races;
 
-CREATE TABLE stats (
-stats_id int auto_increment primary key,
-strength int NOT NULL,
-dexterity int NOT NULL,
-constitution int NOT NULL, 
-intelligence int NOT NULL,
-wisdom int NOT NULL,
-charisma int NOT NULL
-);
 
 drop table alignment;
 CREATE table alignment (
@@ -115,11 +106,6 @@ insert into weapons (type, name, damage, weight) values ('Martial Weapon', 'Long
  
 
 
-CREATE table alignment_player (
-id int auto_increment primary key,
-player_id int,
-alignment_id int
-);
 
 
 Drop Table players;
@@ -127,7 +113,7 @@ CREATE TABLE players (
 player_id int auto_increment primary key,
 creature_id int,
 race_id int,
-stats_id int,
+level_id int,
 armor_id int,
 weapon_id int, 
 alignment_id int, 
@@ -138,27 +124,44 @@ FOREIGN KEY (alignment_id) references alignment (alignment_id)
 
 select * from players;
 
-drop table player_stats;
-CREATE table player_stats(
-id int auto_increment primary key,
-player_id int NOT NULL,
-stats_id int NOT NULL
-);
+
 
 select * from weapons;
 select * from players;
 select * from armor;
 insert into players (creature_id, race_id, armor_id, weapon_id, alignment_id, player_name, character_name) VALUES ('1', '2', '3', '5', '8', 'Catherine Wilber', 'Cortana');
 
-select * from player;
-select * from player;
-select * from armor;
-select * from weapon;
-select * from player;
-select * from class;
 
-select * from races;
-dROP TABLE PLAYER;
 
-select * from alignment;
 
+create table level (
+level_id int auto_increment primary key,
+experience_points int,
+level int,
+proficiency_bonus VARCHAR(50),
+feats varchar(50),
+ability_increase varchar(50)
+);
+select * from level;
+drop table level;
+
+insert into level (experience_points, level, proficiency_bonus, feats, ability_increase) VALUES ('0', '1', '+2', '1st', 'N/A' );
+insert into level (experience_points, level, proficiency_bonus, feats, ability_increase) VALUES ('300', '2', '+2', 'N/A', 'N/A');
+insert into level (experience_points, level, proficiency_bonus, feats, ability_increase) VALUES ('900', '3', '+2', '2nd', 'N/A');
+insert into level (experience_points, level, proficiency_bonus, feats, ability_increase) VALUES ('2700', '4', '+2', 'N/A', '1st');
+insert into level (experience_points, level, proficiency_bonus, feats, ability_increase) VALUES ('6500', '5', '+3', 'N/A', 'N/A');
+insert into level (experience_points, level, proficiency_bonus, feats, ability_increase) VALUES ('14000', '6', '+3', '3rd', 'N/A');
+insert into level (experience_points, level, proficiency_bonus, feats, ability_increase) VALUES ('23000', '7', '+3', 'N/A', 'N/A');
+insert into level (experience_points, level, proficiency_bonus, feats, ability_increase) VALUES ('34000', '8', '+3', 'N/A', '2nd');
+insert into level (experience_points, level, proficiency_bonus, feats, ability_increase) VALUES ('48000', '9', '+4', '4th', 'N/A');
+insert into level (experience_points, level, proficiency_bonus, feats, ability_increase) VALUES ('64000', '10', '+4', 'N/A', 'N/A');
+insert into level (experience_points, level, proficiency_bonus, feats, ability_increase) VALUES ('85000', '11', '+4', 'N/A', 'N/A');
+insert into level (experience_points, level, proficiency_bonus, feats, ability_increase) VALUES ('100000', '12', '+4', '5th', '3rd');
+insert into level (experience_points, level, proficiency_bonus, feats, ability_increase) VALUES ('120000', '13', '+5', 'N/A', 'N/A');
+insert into level (experience_points, level, proficiency_bonus, feats, ability_increase) VALUES ('140000', '14', '+5', 'N/A', 'N/A');
+insert into level (experience_points, level, proficiency_bonus, feats, ability_increase) VALUES ('165000', '15', '+5', '6th', 'N/A');
+insert into level (experience_points, level, proficiency_bonus, feats, ability_increase) VALUES ('195000', '16', '+5', 'N/A', 'N/A');
+insert into level (experience_points, level, proficiency_bonus, feats, ability_increase) VALUES ('225000', '17', '+6', 'N/A', 'N/A');
+insert into level (experience_points, level, proficiency_bonus, feats, ability_increase) VALUES ('265000', '18', '+6', '7th', 'N/A');
+insert into level (experience_points, level, proficiency_bonus, feats, ability_increase) VALUES ('305000', '19', '+6', 'N/A', 'N/A');
+insert into level (experience_points, level, proficiency_bonus, feats, ability_increase) VALUES ('355000', '20', '+6', 'N/A', '5th');
