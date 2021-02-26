@@ -2,7 +2,8 @@
     <div class="main">
         <div class="header">
             <h1 class="title">Dungeons and Dragons: Alignments</h1>
-            <p>Click on Description for additional details.</p>
+            <img class="alignment" alt="alignment" src="../assets/alignmentdnd.jpg">
+          <p>Click on Description for additional details.</p>
         </div>
 
         <div class="content">
@@ -11,7 +12,7 @@
                     <tr>
                         <th>#</th>
                         <th>Name</th>
-                        <th><a v-bind:href="'http://easydamus.com/alignment.html'">Description</a></th>
+                        <th><a class="description" v-bind:href="'http://easydamus.com/alignment.html'">Description</a></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -40,4 +41,19 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+p {
+    font-style: italic;
+    color: darkblue;
+}
+
+.description:hover {
+    color: #5b7eb8;
+}
+
+.description {
+      color: #2c3e50;
+}
+</style>
 

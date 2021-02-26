@@ -81,3 +81,26 @@ export default {
 }
 </script>
 
+<style scoped>
+.button {
+    float: right;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.button:hover {
+    background-color: green;
+}
+
+.button.is-primary {
+    background-color: darkblue;
+}
+
+.button.is-primary:hover {
+    background-color: green;
+}
+.title {
+    color: darkblue;
+}
+
+</style>
+

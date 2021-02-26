@@ -1,9 +1,16 @@
 <template>
     <div class="main">
+
         <div class="header">
             <h1 class="title">Dungeons and Dragons: Races</h1>
-            <p>Click on Description for additional details</p>
+
+            <img class="race" alt="race" src="../assets/races.png">
+            
+         
         </div>
+
+        <p>Click on Description for additional details.</p>
+
 
         <div class="content">
             <table id="races" class="table">
@@ -11,7 +18,7 @@
                     <tr>
                         <th>#</th>
                         <th>Name</th>
-                        <th><a v-bind:href="'https://www.dndbeyond.com/races'">Description</a></th>
+                        <th><a class="description" v-bind:href="'https://www.dndbeyond.com/races'">Description</a></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -40,3 +47,18 @@ export default {
     }
 }
 </script>
+<style scoped>
+p {
+    font-style: italic;
+    color: darkblue;
+}
+
+.description:hover {
+    color: #5b7eb8;
+}
+
+.description {
+      color: #2c3e50;
+}
+</style>
+

@@ -2,8 +2,8 @@
     <div class="main">
         <div class="header">
             <h1 class="title">Dungeons and Dragons: Weapons</h1>
-            <p class="information">This is just some of the weapons your character may be able to utilize</p>
-        </div>
+            <img class="weapon" alt="weapon" src="../assets/encumbrance.png">
+            </div>
 
         <router-link to="weapon/add" tag="button" class="button is-primary">Add Weapon</router-link>
 
@@ -48,7 +48,16 @@ export default {
 </script>
 
 <style scoped>
-button {
+.button {
     float: right;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: darkblue;
 }
+
+.button:hover {
+    background-color: green;
+}
+
+
 </style>

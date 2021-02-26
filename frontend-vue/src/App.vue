@@ -3,11 +3,11 @@
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to = "/players">My Players</router-link> |
-      <router-link to="/armors">Armor</router-link> |
-      <router-link to="/weapons">Weapons</router-link> |
       <router-link to="/alignments">Alignments</router-link> |
       <router-link to="/races">Races</router-link> |
       <router-link to="/creatures">Classes</router-link> |
+       <router-link to="/armors">Armor</router-link> |
+      <router-link to="/weapons">Weapons</router-link> 
     </div>
     <router-view/>
   </div>
@@ -24,7 +24,15 @@
 }
 
 #nav {
-  padding: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 50%;
+    margin-right: 35%;
+    margin-left: 25%;
+    margin-bottom: 3em;
+   
+
 }
 
 #nav a {
@@ -33,7 +41,7 @@
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
+  color: #5b7eb8;
 }
 
 

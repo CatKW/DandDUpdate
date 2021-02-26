@@ -4,11 +4,13 @@ import axios from 'axios'
 import moment from 'moment'
 import router from './router'
 
+
 require("./assets/main.css");
 
 Vue.config.productionTip = false
 Vue.prototype.$http = axios
 Vue.prototype.moment = moment
+
 
 new Vue({
   router,

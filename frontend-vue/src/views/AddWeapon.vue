@@ -65,3 +65,23 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+.button {
+    float: right;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: darkblue;
+    color: white;    
+}
+
+.button:hover {
+    background-color: green;
+    color: white;
+}
+
+.title {
+    color: darkblue;
+}
+
+</style>

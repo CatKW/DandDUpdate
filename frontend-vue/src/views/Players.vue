@@ -1,6 +1,7 @@
 <template>
     <div class="main">
-        <div class="header">
+        <img alt="dragon" src="../assets/download.png">
+            <div class="header">
             <h1 class="title">Dungeons and Dragons: Your Characters</h1>
         </div>
 
@@ -43,9 +44,9 @@
 export default {
     name: "Players",
     data: () => ({
-        players:[]
+        players:[],
     }),
-
+    
     
     async mounted() {
         console.log('players mounted being')
@@ -56,8 +57,25 @@ export default {
 }
 </script>
 
-<style scoped>
-button{
-  float: right;
+<style>
+.button {
+    float: right;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: darkblue;
+    color: white;    
 }
+
+.button:hover {
+    background-color: green;
+    color: white;
+}
+
+.title{
+    color: darkblue;  
+}
+
+
+
+
 </style>

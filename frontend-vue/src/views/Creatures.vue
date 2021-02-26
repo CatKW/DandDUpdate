@@ -2,7 +2,11 @@
     <div class="main">
         <div class="header">
             <h1 class="title">Dungeons and Dragons: Classes</h1>
+            <img class="creature" alt="creature" src="../assets/dndcharacters.png">
         </div>
+
+         
+
         <div class="content">
             <table id="creatures" class="table">
                 <thead>
@@ -44,3 +48,4 @@ export default {
     }
 }
 </script>
+

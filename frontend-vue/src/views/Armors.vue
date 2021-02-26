@@ -2,7 +2,11 @@
   <div class="main">
     <div class="header">
     <h1 class="title">Dungeons and Dragons: Armor</h1>
-    </div>
+    <img class="armor" alt="armor" src="../assets/weapon-gallery.png">
+
+
+  
+   </div>
 
 
     <router-link to="armor/add" tag="button" class="button is-primary">Add Armor</router-link>
@@ -47,7 +51,23 @@
   }
   </script>
 <style scoped>
-button {
-  float: right;
+.button {
+    float: right;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: darkblue;
+    color: white;    
 }
+
+.button:hover {
+    background-color: green;
+    color: white;
+}
+
+.title{
+    color: darkblue
+    
+}
+
+
 </style>
