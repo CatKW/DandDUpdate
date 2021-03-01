@@ -66,6 +66,7 @@ insert into alignment (name, description) VALUES ('Chaotic Evil', 'Chaotic evil 
 
 select * from alignment;
 
+
 drop table armor;
 Create table armor (
 armor_id int auto_increment primary key,
@@ -104,7 +105,7 @@ insert into weapons (type, name, damage, weight) values ('Martial Weapon', 'Morn
 insert into weapons (type, name, damage, weight) values ('Martial Weapon', 'Longsword', '1d8 slashing damage', 3);
  
  
-
+select * from weapons;
 
 
 
