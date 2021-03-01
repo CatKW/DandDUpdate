@@ -47,3 +47,19 @@ export default {
 }
 </script>
 
+<style scoped>
+
+.title{
+    color: darkblue;  
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title {
+    text-align: center;
+}
+
+</style>

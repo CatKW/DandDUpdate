@@ -50,6 +50,7 @@
   </script>
 <style scoped>
 .button {
+    margin-left: 45%;
     margin-top: 10px;
     margin-bottom: 10px;
     background-color: darkblue;
@@ -62,9 +63,15 @@
 }
 
 .title{
-    color: darkblue
-    
+    color: darkblue;  
+    text-align: center;
 }
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 
 </style>

@@ -18,7 +18,7 @@
         <div class="field">
             <label class="label" for="damage">Weapon: Damage</label>
             <div class="controller">
-                <input id="damage" class="input" type="text" v-model="weapon.damage" placeholder="Dice Roll and Damge Type"/>
+                <input id="damage" class="input" type="text" v-model="weapon.damage" placeholder="Dice Roll and Damage Type"/>
             </div>
         </div>
 

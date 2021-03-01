@@ -57,7 +57,7 @@ export default {
 }
 </script>
 
-<style>
+<style scope>
 .button {
     margin-left: 45%;
     margin-top: 10px;

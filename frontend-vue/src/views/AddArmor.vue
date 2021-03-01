@@ -5,14 +5,14 @@
         <div class="field">
             <label class="label">Armor: Type</label>
             <div  class="control">
-                <input class="input" type="text" v-model="armor.type" placeholder="Armor Type"/>
+                <input class="input" type="text" v-model="armor.type" placeholder="Example: Light Armor"/>
             </div>
        </div>
 
         <div class="field">
             <label class="label">Armor: Name</label>
             <div class="control">
-                <input class="input" type="text" v-model="armor.name" placeholder="Armor Type"/>
+                <input class="input" type="text" v-model="armor.name" placeholder="Example: Leather"/>
             </div>
         </div>
 
@@ -21,14 +21,14 @@
         <div class="field">
             <label class="label">Armor: Class Number</label>
             <div class="control">
-                <input class="input" type="number" v-model="armor.classNumber" placeholder="example: 11"/>
+                <input class="input" type="number" v-model="armor.classNumber" placeholder="Example: 11"/>
             </div>
         </div>
 
         <div class="field">
             <label class="label">Armor: Modifier</label>
             <div class="contorl">
-                <input class="input" type="text" v-model="armor.modifier" placeholder="+ example + Dex Modifier(max 2)"/>
+                <input class="input" type="text" v-model="armor.modifier" placeholder="Example: 11 + Dex Modifier(max 2)"/>
             </div>
         </div>
 
